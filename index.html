@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <title>Cyazun | User Name</title>
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div ng-app>
+    <div ng-controller="CyasController">
+      <div class="text-center">
+        <h2>What's Happening</h2>
+      </div>
+
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <ul class="nav navbar-nav filter-nav">
+            <li><button class="btn btn-info navbar-btn">Friend's Cyas</button></li>
+            <li><button class="btn btn-info navbar-btn">Cyas Near You</button></li>
+            <li><button class="btn btn-primary navbar-btn">Create new Cya</button></li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <label class="filterCyas" for="searchCyas">Search Cyas</label>
+              <input type="text" class="form-control" id="searchCyas" ng-model="cyaFilter">
+            </div>
+          </form>
+        </div>
+      </nav>
+
+      <div class="container">
+        <p class="bigger">Filter:</p>
+        <ul class="nav nav-tabs">
+          <li><a href='#' ng-click="doSort('title')">Cya</a></li>
+          <li><a href='#' ng-click="doSort('location')">Location</a></li>
+          <li><a href='#' ng-click="doSort('date')">Date</a></li>
+          <li><a href='#' ng-click="doSort('time') | date:'shortTime'">Time</a></li>
+          <li><a href='#' ng-click="doSort('type')">Type</a></li>
+        </ul>
+        <div class="row">
+          <div ng-repeat="cya in cyas | filter:cyaFilter | orderBy:sortBy:reverse" class="col-sm-4">
+            <h3> {{ cya.title }} </h2>
+            <div class="well cyas">
+              <img class="img-responsive pull-right cya-pic" src="http://fpoimg.com/150x150" alt="{{cya.location}} picture">
+              <p> <span class="cya-label">Location:</span class="cya-label"> {{ cya.location }}</p>
+              <p> <span class="cya-label">Date:</span class="cya-label"> {{ cya.date }} </p>
+              <p> <span class="cya-label">Time:</span class="cya-label"> {{ cya.time }} </p>
+              <p> <span class="cya-label">Type:</span class="cya-label"> {{ cya.type }} </p>
+              <button class="btn btn-primary join">Join</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/cyasController.js"></script>
+</body>
+</html>

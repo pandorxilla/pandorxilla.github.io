@@ -1,0 +1,54 @@
+.clean {
+  list-style-type: none;
+}
+
+.nav p {
+  display: inline;
+  float: left;
+}
+
+.bigger {
+  font-size: 1.3em;
+}
+.cya-label {
+  font-weight: bold;
+}
+.navbar-brand {
+  font-size: 2em;
+}
+.navbar {
+  font-size: 2em;
+  padding: 20px;
+}
+
+.filterCyas {
+  font-size: .6em;
+}
+
+.filter-nav li button {
+  font-size: .6em;
+  margin-right: 10px;
+}
+
+.cyas {
+  margin-right: 10px;
+}
+
+.join {
+  margin-top: 10px;
+}
+
+.cya-pic {
+  border-radius: 50%;
+}
+
+.create_cya {
+  background-color: #DF691A;
+  padding: 20px;
+  width: 70%;
+  margin: 20px auto;
+}
+
+.create_cya label {
+  font-size: 1.2em;
+}

@@ -1,0 +1,79 @@
+<div class="container" ng-show="createCya">
+  <form class="create_cya form-horizontal">
+    <fieldset>
+      <legend>Title</legend>
+      <div class="form-group">
+        <label for="title" class="col-sm-2">Cya</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="title" type="text">
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Location</legend>
+      <div class="form-group">
+        <label for="location-name" class="col-sm-2">Name</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="location-name" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="location-address" class="col-sm-2">Address</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="location-address" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="location-city" class="col-sm-2">City</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="location-city" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="location-state" class="col-sm-2">State</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="location-state" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="location-zip" class="col-sm-2">Zip Code</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="location-zip" type="text">
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Details</legend>
+      <div class="form-group">
+        <label for="date" class="col-sm-2">Date</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="date" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="time" class="col-sm-2">Time</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="time" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="type" class="col-sm-2">Type</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="type" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="description" class="col-sm-2">Description</label>
+        <div class="col-sm-10">
+          <textarea rows='6' class="col-sm-12"></textarea>
+        </div>
+      </div>
+    </fieldset>
+    <div class="text-center">
+      <input type="submit" class="btn btn-default" ng-click="toggleShow()">
+      <button class="btn btn-danger" ng-click="toggleShow()">Cancel</button>
+    </div>
+  </form>
+</div>
